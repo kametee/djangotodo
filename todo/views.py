@@ -8,6 +8,7 @@ from .models import Todo
 class TodoList(ListView):
   model = Todo
   context_object_name = "tasks"
+  ordering = ["-deadline"]
 
 class TodoDetail(DetailView):
   model = Todo
